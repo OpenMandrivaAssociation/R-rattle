@@ -9,9 +9,28 @@ Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
-Requires:         R-RGtk2 R-pmml R-bitops R-colorspace R-ada R-amap R-arules R-arulesViz R-biclust R-cairoDevice R-cba R-descr R-doBy R-e1071 R-ellipse R-fEcofin R-fBasics R-foreign R-fpc R-gdata R-gplots R-graph R-grid R-gtools R-gWidgetsRGtk2 R-Hmisc R-kernlab R-latticist R-Matrix R-methods R-mice R-network R-nnet R-odfWeave R-party R-playwith R-psych R-randomForest R-RBGL R-RColorBrewer R-reshape R-rggobi R-RGtk2Extras R-ROCR R-RODBC R-rpart R-rpart.plot R-RSvgDevice R-siatclust R-survival R-timeDate R-verification R-XML R-pkgDepTools R-Rgraphviz 
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex 
-BuildRequires:    R-RGtk2 R-pmml R-bitops R-colorspace R-ada R-amap R-arules R-arulesViz R-biclust R-cairoDevice R-cba R-descr R-doBy R-e1071 R-ellipse R-fEcofin R-fBasics R-foreign R-fpc R-gdata R-gplots R-graph R-grid R-gtools R-gWidgetsRGtk2 R-Hmisc R-kernlab R-latticist R-Matrix R-methods R-mice R-network R-nnet R-odfWeave R-party R-playwith R-psych R-randomForest R-RBGL R-RColorBrewer R-reshape R-rggobi R-RGtk2Extras R-ROCR R-RODBC R-rpart R-rpart.plot R-RSvgDevice R-siatclust R-survival R-timeDate R-verification R-XML R-pkgDepTools R-Rgraphviz 
+Requires:         R-RGtk2 R-pmml R-bitops R-colorspace R-ada R-amap R-arules
+Requires:         R-arulesViz R-biclust R-cairoDevice R-cba R-descr R-doBy
+Requires:         R-e1071 R-ellipse R-fEcofin R-fBasics R-foreign R-fpc
+Requires:         R-gdata R-gplots R-graph R-grid R-gtools R-gWidgetsRGtk2
+Requires:         R-Hmisc R-kernlab R-latticist R-Matrix R-methods R-mice
+Requires:         R-network R-nnet R-odfWeave R-party R-playwith R-psych
+Requires:         R-randomForest R-RBGL R-RColorBrewer R-reshape R-rggobi
+Requires:         R-RGtk2Extras R-ROCR R-RODBC R-rpart R-rpart.plot
+Requires:         R-RSvgDevice R-siatclust R-survival R-timeDate
+Requires:         R-verification R-XML R-pkgDepTools R-Rgraphviz
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex
+BuildRequires:    R-RGtk2 R-pmml R-bitops R-colorspace R-ada R-amap R-arules
+BuildRequires:    R-arulesViz R-biclust R-cairoDevice R-cba R-descr R-doBy
+BuildRequires:    R-e1071 R-ellipse R-fEcofin R-fBasics R-foreign R-fpc
+BuildRequires:    R-gdata R-gplots R-graph R-grid R-gtools R-gWidgetsRGtk2
+BuildRequires:    R-Hmisc R-kernlab R-latticist R-Matrix R-methods R-mice
+BuildRequires:    R-network R-nnet R-odfWeave R-party R-playwith R-psych
+BuildRequires:    R-randomForest R-RBGL R-RColorBrewer R-reshape R-rggobi
+BuildRequires:    R-RGtk2Extras R-ROCR R-RODBC R-rpart R-rpart.plot
+BuildRequires:    R-RSvgDevice R-siatclust R-survival R-timeDate
+BuildRequires:    R-verification R-XML R-pkgDepTools R-Rgraphviz
+BuildRequires:    x11-server-xvfb
 
 %description
 Rattle (the R Analytic Tool To Learn Easily) provides a Gnome (RGtk2)
@@ -39,7 +58,7 @@ rm -f %{buildroot}%{rlibdir}/R.css
 rm -f %{buildroot}%{rlibdir}/%{packname}/.Rhistory
 
 %check
-%{_bindir}/R CMD check %{packname}
+xvfb-run %{_bindir}/R CMD check %{packname}
 
 %files
 %dir %{rlibdir}/%{packname}
