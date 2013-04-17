@@ -1,6 +1,8 @@
 %global packname  rattle
 %global rlibdir  %{_libdir}/R/library
 
+%define debug_package %{nil}
+
 Name:             R-%{packname}
 Version:          2.6.16
 Release:          1
