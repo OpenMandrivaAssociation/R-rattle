@@ -5,7 +5,7 @@
 
 Name:             R-%{packname}
 Version:          2.6.16
-Release:          1
+Release:          2
 Summary:          Graphical user interface for data mining in R
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
