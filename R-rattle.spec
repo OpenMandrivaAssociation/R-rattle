@@ -4,13 +4,13 @@
 %define debug_package %{nil}
 
 Name:             R-%{packname}
-Version:          2.6.16
-Release:          2
+Version:          2.6.26
+Release:          1
 Summary:          Graphical user interface for data mining in R
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/rattle_2.6.26.tar.gz
 Requires:         R-RGtk2 R-pmml R-bitops R-colorspace R-ada R-amap R-arules
 Requires:         R-arulesViz R-biclust R-cairoDevice R-cba R-descr R-doBy
 Requires:         R-e1071 R-ellipse R-fEcofin R-fBasics R-foreign R-fpc
@@ -81,3 +81,4 @@ xvfb-run %{_bindir}/R CMD check %{packname}
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/odt
 %{rlibdir}/%{packname}/po
+
